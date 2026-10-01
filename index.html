@@ -1,0 +1,233 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Kaderníctvo Bella · kaderníctvo v Púchove — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh webu pre Kaderníctvo Bella, ul. 1. mája, Púchov: strihanie, farbenie, spoločenské účesy.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playball&display=swap" rel="stylesheet">
+<style>
+:root{
+  --room:#221714;     /* zem: šatňa za zrkadlom */
+  --room-2:#2C1F1B;
+  --frame:#120B0A;
+  --glass:#E8E1D9;
+  --glass-2:#CFC5BB;
+  --on-glass:#2A1D19;
+  --text:#F1E5D9;
+  --muted:#BBA99B;
+  --line:rgba(241,229,217,.16);
+  --bulb:#FFE3A6;     /* akcent: teplé svetlo žiaroviek */
+  --gold:#E9B04C;
+  --copper:#9A5236;   /* materiál: gaštanové vlasy */
+  --script:"Playball",cursive;
+  --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--room);color:var(--text);font:400 17px/1.6 var(--sans);padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--bulb);outline-offset:3px}
+.in{width:min(1140px,100% - 40px);margin-inline:auto}
+.cap{font:700 12px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.tab{font-variant-numeric:tabular-nums}
+.u{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.u:hover{background-size:100% 1px}
+
+.notice{background:#0B0706;color:var(--text);font-size:13px;line-height:1.4;padding:8px 20px;text-align:center;border-bottom:1px solid var(--line)}
+
+/* hlavička */
+.top{display:flex;align-items:center;gap:30px;min-height:74px}
+.brand{text-decoration:none;margin-right:auto;display:flex;align-items:baseline;gap:10px}
+.brand b{font:400 32px/1 var(--script);color:var(--bulb)}
+.brand span{font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.top nav{display:flex;gap:26px;font-size:15px}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:3px;font:700 15px/1 var(--sans);text-decoration:none;border:1px solid var(--line);transition:background .2s,border-color .2s,color .2s}
+.pill.lit{background:var(--gold);border-color:var(--gold);color:#1E140F}
+.pill.lit:hover{background:var(--bulb);border-color:var(--bulb)}
+.pill.ghost:hover{border-color:var(--text)}
+
+/* zrkadlo – rám so žiarovkami */
+.bulbs{display:flex;justify-content:space-around;align-items:center}
+.bulbs i{width:20px;height:20px;border-radius:50%;flex:none;
+  background:radial-gradient(circle at 38% 34%,#fff 0,#FFF2D2 28%,var(--bulb) 52%,#E9A447 100%);
+  box-shadow:0 0 10px 3px rgba(255,205,130,.55),0 0 36px 10px rgba(255,180,90,.18)}
+.mirror{display:grid;grid-template-columns:46px 1fr 46px;grid-template-rows:46px 1fr 46px;background:var(--frame);border-radius:6px;box-shadow:0 30px 60px -20px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.05)}
+.mirror>.bulbs.h{grid-column:1/-1}
+.mirror>.bulbs.v{flex-direction:column}
+.glass{position:relative;overflow:hidden;border-radius:2px;color:var(--on-glass);
+  background:linear-gradient(160deg,#F1EBE4 0,var(--glass) 38%,var(--glass-2) 100%);
+  box-shadow:inset 0 0 70px rgba(255,196,120,.45)}
+.glass::before{content:"";position:absolute;inset:-20% auto -20% 58%;width:90px;transform:rotate(18deg);background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.55),rgba(255,255,255,0))}
+.glass::after{content:"";position:absolute;inset:-20% auto -20% calc(58% + 110px);width:26px;transform:rotate(18deg);background:rgba(255,255,255,.35)}
+.glass>*{position:relative;z-index:1}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center;padding:44px 0 72px;min-height:min(580px,80vh)}
+.hero .glass{display:flex;flex-direction:column;justify-content:center;padding:44px 48px 40px;min-height:380px}
+.hero h1{font:400 clamp(96px,13vw,168px)/.9 var(--script);color:var(--copper);margin-left:-4px}
+.hero h1 small{display:block;font:700 13px/1.3 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--on-glass);margin:0 0 10px 6px}
+.hero .glass p{font:500 15px/1.4 var(--sans);letter-spacing:.06em;margin-top:18px;margin-left:6px}
+.side .lead{font-size:20px;line-height:1.5;margin:14px 0 28px}
+.side .acts{display:flex;flex-wrap:wrap;gap:12px}
+.score{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;margin-top:36px;padding-top:22px;border-top:1px solid var(--line)}
+.score b{font:700 34px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--bulb)}
+.score span{font-size:14px;color:var(--muted)}
+
+/* služby */
+.svc{padding:88px 0 80px;background:var(--room-2);border-block:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:44px}
+.head h2{font:400 clamp(48px,5.4vw,68px)/1 var(--script);color:var(--text);margin-top:8px}
+.head p{max-width:27em;color:var(--muted);font-size:15px}
+.trio{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.trio li{background:var(--frame);border-radius:6px;padding:0 18px 18px;transition:transform .5s}
+.trio li:hover{transform:scale(1.045)}
+.trio .bulbs{height:46px}
+.trio .glass{padding:30px 26px 26px;min-height:220px;display:flex;flex-direction:column}
+.trio h3{font:400 40px/1.1 var(--script);color:var(--copper)}
+.trio p{font-size:15px;margin-top:10px}
+.trio .tbd{margin-top:auto;padding-top:14px;border-top:1px solid rgba(42,29,25,.18);font:700 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#6C5A50}
+.demo{margin-top:26px;font-size:14px;color:var(--muted)}
+.demo b{color:var(--bulb);font-weight:700}
+
+/* ocenenia */
+.awards{padding:88px 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.awards h2{font:400 clamp(44px,5vw,60px)/1.05 var(--script);margin:8px 0 14px}
+.awards p{color:var(--muted);font-size:15px;max-width:26em}
+.medals{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.medals li{padding:26px 10px 0;text-align:left}
+.medals li+li{border-left:1px solid var(--line);padding-left:18px}
+.medals i{display:block;width:44px;height:44px;border-radius:50%;margin-bottom:18px;
+  background:radial-gradient(circle at 36% 32%,#fff 0,#FFF0C8 22%,var(--gold) 58%,#A8701F 100%);box-shadow:0 0 18px 4px rgba(233,176,76,.35)}
+.medals .ag i{background:radial-gradient(circle at 36% 32%,#fff 0,#F2F0EC 24%,#C9C4BD 60%,#86807A 100%);box-shadow:0 0 16px 3px rgba(220,215,208,.22)}
+.medals b{display:block;font:700 30px/1 var(--sans);font-variant-numeric:tabular-nums}
+.medals span{font-size:14px;color:var(--muted)}
+
+/* kontakt */
+.contact{padding:84px 0 92px;border-top:1px solid var(--line)}
+.contact h2{font:400 clamp(44px,5vw,60px)/1 var(--script);margin:8px 0 40px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.cols>div{padding:4px 28px 0 0}
+.cols>div+div{padding-left:28px;border-left:1px solid var(--line)}
+.cols h3{margin-bottom:12px}
+.cols p{font-size:17px}
+.cols small{display:block;font-size:14px;color:var(--muted);margin-top:8px}
+.cols .links{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin-top:10px}
+.cols .links a{font-weight:700;font-size:15px;padding:8px 0;color:var(--bulb)}
+
+footer{border-top:1px solid var(--line);padding:26px 0 34px;font-size:14px;color:var(--muted)}
+footer .in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+.dock{display:none}
+@media (max-width:920px){
+  .top nav{display:none}
+  .hero{grid-template-columns:1fr;gap:36px;min-height:0;padding-top:28px}
+  .trio{grid-template-columns:1fr;max-width:520px}
+  .awards{grid-template-columns:1fr;gap:32px}
+  .cols{grid-template-columns:1fr}
+  .cols>div,.cols>div+div{padding:20px 0;border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .in{width:calc(100% - 32px)}
+  .top{min-height:64px}
+  .top .pill{display:none}
+  .mirror{grid-template-columns:30px 1fr 30px;grid-template-rows:30px 1fr 30px}
+  .bulbs i{width:13px;height:13px}
+  .hero .glass{padding:34px 22px 30px;min-height:300px}
+  .hero h1{font-size:104px}
+  .side .lead{font-size:18px}
+  .side .acts .pill{flex:1 1 100%}
+  .svc,.awards{padding:64px 0}
+  .trio .bulbs{height:34px}
+  .trio h3{font-size:36px}
+  .medals{grid-template-columns:1fr 1fr}
+  .medals li:nth-child(3){border-left:0;padding-left:10px}
+  .medals li:nth-child(n+3){border-top:1px solid var(--line);margin-top:26px}
+  .dock{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:9;background:#140D0B;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+  .dock .pill{min-height:48px;padding:0 8px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="notice">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<header class="in top">
+  <a class="brand" href="#zaciatok" aria-label="Kaderníctvo Bella — na začiatok"><b>Bella</b><span>Kaderníctvo · Púchov</span></a>
+  <nav aria-label="Hlavná navigácia"><a class="u" href="#sluzby">Služby</a><a class="u" href="#ocenenia">Ocenenia</a><a class="u" href="#kontakt">Kontakt</a></nav>
+  <a class="pill ghost" href="https://www.facebook.com/Kadern%C3%ADctvo-Bella-238003466348896/" rel="noopener">Facebook</a>
+</header>
+
+<main id="zaciatok">
+  <section class="in hero" aria-label="Úvod">
+    <div class="mirror">
+      <div class="bulbs h" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="bulbs v" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="glass">
+        <h1><small>Kaderníctvo</small>Bella</h1>
+        <p>Strihanie · farbenie · spoločenské účesy</p>
+      </div>
+      <div class="bulbs v" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="bulbs h" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="side">
+      <p class="cap">Púchov · ul. 1. mája</p>
+      <p class="lead">Kaderníctvo v Púchove na ulici 1. mája. Moderné strihy, farbenie a spoločenské účesy.</p>
+      <div class="acts">
+        <a class="pill lit" href="https://www.facebook.com/Kadern%C3%ADctvo-Bella-238003466348896/" rel="noopener">Napísať cez Facebook</a>
+        <a class="pill ghost" href="https://www.google.com/maps/search/Kadern%C3%ADctvo+Bella+P%C3%BAchov" rel="noopener">Nájsť na mape</a>
+      </div>
+      <div class="score">
+        <b>9,5</b><span>z 10 · 52 hodnotení na Orly Kaderníctva</span>
+        <b>4,7</b><span>z 5 · 42 hodnotení na Facebooku (podľa Orly)</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc" id="sluzby" aria-labelledby="sluzby-h">
+    <div class="in">
+      <div class="head">
+        <div><p class="cap">Pri zrkadle</p><h2 id="sluzby-h">Služby</h2></div>
+        <p>Tri veci, ktoré salón uvádza na profile Orly Kaderníctva. Ceny ani trvanie na dostupných zdrojoch zatiaľ nie sú.</p>
+      </div>
+      <ul class="trio">
+        <li><div class="bulbs" aria-hidden="true"><i></i><i></i><i></i></div><div class="glass"><h3>Strihanie</h3><p>Moderné strihy.</p><span class="tbd">Cena: doplní salón</span></div></li>
+        <li><div class="bulbs" aria-hidden="true"><i></i><i></i><i></i></div><div class="glass"><h3>Farbenie</h3><p>Farbenie vlasov.</p><span class="tbd">Cena: doplní salón</span></div></li>
+        <li><div class="bulbs" aria-hidden="true"><i></i><i></i><i></i></div><div class="glass"><h3>Spoločenské účesy</h3><p>Účesy na slávnostné príležitosti.</p><span class="tbd">Cena: doplní salón</span></div></li>
+      </ul>
+      <p class="demo"><b>Ukážka návrhu:</b> cenník, trvanie a popis služieb doplní podnik — tu je pripravené miesto, kde budú.</p>
+    </div>
+  </section>
+
+  <section class="in awards" id="ocenenia" aria-labelledby="ocenenia-h">
+    <div>
+      <p class="cap">Orly Kaderníctva</p>
+      <h2 id="ocenenia-h">Ocenenia Orly</h2>
+      <p>Medaily uvedené na profile salóna na portáli orlykadernictva.eu, stav k 1. 10. 2026.</p>
+    </div>
+    <ul class="medals">
+      <li class="ag"><i aria-hidden="true"></i><b>2022</b><span>strieborná</span></li>
+      <li><i aria-hidden="true"></i><b>2023</b><span>zlatá</span></li>
+      <li><i aria-hidden="true"></i><b>2025</b><span>zlatá</span></li>
+      <li><i aria-hidden="true"></i><b>2026</b><span>zlatá</span></li>
+    </ul>
+  </section>
+
+  <section class="contact" id="kontakt" aria-labelledby="kontakt-h">
+    <div class="in">
+      <p class="cap">Kontakt</p>
+      <h2 id="kontakt-h">Kde je salón</h2>
+      <div class="cols">
+        <div><h3 class="cap">Adresa</h3><p>ul. 1. mája<br>020 01 Púchov</p><small>Číslo domu overiť.</small><div class="links"><a class="u" href="https://www.google.com/maps/search/Kadern%C3%ADctvo+Bella+P%C3%BAchov" rel="noopener">Otvoriť v Mapách Google →</a></div></div>
+        <div><h3 class="cap">Objednanie</h3><p>Cez Facebook stránku salóna.</p><small>Ukážka návrhu: telefón a otváracie hodiny doplní podnik (na zdrojoch nie sú).</small><div class="links"><a class="u" href="https://www.facebook.com/Kadern%C3%ADctvo-Bella-238003466348896/" rel="noopener">Facebook →</a></div></div>
+        <div><h3 class="cap">Hodnotenie</h3><p><span class="tab">9,5 / 10</span> · 52 hodnotení</p><small>Orly Kaderníctva, 1. 10. 2026</small><div class="links"><a class="u" href="https://www.orlykadernictva.eu/profile-3773-kadernictvo-bella" rel="noopener">Profil na Orly Kaderníctva →</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="in"><span>Neoficiálny návrh webu · webdavid.sk · 2026</span><span>Údaje podľa orlykadernictva.eu (1. 10. 2026)</span></div></footer>
+
+<nav class="dock" aria-label="Rýchle akcie">
+  <a class="pill lit" href="https://www.facebook.com/Kadern%C3%ADctvo-Bella-238003466348896/" rel="noopener">Napísať</a>
+  <a class="pill ghost" href="https://www.google.com/maps/search/Kadern%C3%ADctvo+Bella+P%C3%BAchov" rel="noopener">Mapa</a>
+</nav>
